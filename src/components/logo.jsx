@@ -36,7 +36,7 @@ const Logo = () => {
         setUrl(cloudData.url);
          console.log('Image URL:', cloudData.url);
         console.log(url);
-       
+        if (loc != '') {
           try {
             const response = await axios.post('https://fullstack-node-9cxr.onrender.com/api/update-url', {
               id: id,
@@ -47,7 +47,7 @@ const Logo = () => {
           } catch (error) {
             console.error('Error updating URL:', error);
           }
-        
+        }
       } else {
         console.error('Cloudinary response does not contain URL:', cloudData);
       }
@@ -77,22 +77,28 @@ const Logo = () => {
         <h2 className='text-xl font-sans text-gray-500 text-start mx-3 lg:ml-10'>Let others get to know you better! You can do these later</h2><br />
         <div className="flex flex-col w-full">
           <h1 className="text-3xl font-sans font-semibold lg:text-start lg:ml-20">Add an avatar</h1><br />
-          <div className='flex flex-wrap border-none justify-center'>
-            <div className=' justify-start lg:mr-20'>
-            <img src={image ? URL.createObjectURL(image) : ''} className="w-48 h-48 border-2 border-dashed border-gray-300 rounded-full mt-4 md:mt-0 flex lg:ml-[-20] mx-auto"  /><br/>
-              <br/><h2 className='text-3xl font-sans text-start text-bold '>Add your location </h2><br />
-              </div>
+          <div className='flex flex-wrap border-none justify-center sm:justify-center'>
+            <div className=' justify-start lg:mr-20  lg:flex lg:flex-wrap '>
               <div>
-              <div className="relative h-10 bg-whtie lg:ml-5 lg:mt-10 mx-auto mt-20" style={{ width: '200px', border: '2px dashed gray', cursor: 'pointer' }}>
-                <h1 className='font-sans text-xl text-gray-500 p-1'>Choose image</h1>
+            <img src={image ? URL.createObjectURL(image) : ''} className="w-48 h-48 border-2 border-dashed border-gray-300 rounded-full mt-4 md:justify-center flex md:ml-20 mx-auto"  />
+             </div> <br/>
+              
+              <div className='lg:ml-10 md:justify-center '>
+              <div className="relative h-10 bg-whtie lg:ml-5 lg:mt-10  mx-auto md:mr-10 flex justify-center mt-20" style={{ width: '200px', border: '2px dashed gray', cursor: 'pointer' }}>
+                <h1 className='font-sans text-xl text-gray-500 p-1 text-center '>Choose image</h1>
+              </div><br />
+                <p className='text-l text-gray-500 font-sans mx-5'> Or Let others get to know you better! you can do these later</p></div><br />
+              <div className='md:justify-center text-center flex md:ml-10'>
+              <h2 className='text-3xl font-sans text-start text-bold lg:ml-10 mt-10 mx-auto'>Add your location </h2><br />
+              </div>
                 <input
                   type="file"
                   onChange={(e) => handleChange(e)}
                   className="absolute inset-0 opacity-0 w-full h-full cursor-pointer"
                 />
-              </div>
+              
               <br />
-              <p className='text-l text-gray-500 font-sans mx-5'> Or Let others get to know you better! you can do these later</p>
+              
             </div><br />
           </div>
         </div>
