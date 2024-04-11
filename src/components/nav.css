@@ -1,0 +1,22 @@
+th {
+    width: 200px;
+    text-align: center;
+    font-size: 18px;
+}
+
+td {
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: 500;
+    color: gray;
+    font-size: 18px;
+}
+
+table {
+    margin: 10px;
+    margin-top: 40px;
+}
+
+.div::-webkit-scrollbar {
+    display: none;
+}
