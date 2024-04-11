@@ -16,7 +16,7 @@ function App() {
         <Routes>
         <Route path='/' element={<Login />} />
         <Route path='/profile/:id' element={<Logo />} />
-        <Route path='/conformation/:id' element={<Email />} />
+        <Route path='/confirmation/:id' element={<Email />} />
         <Route path='/success/:id' element={<Send/>}/>
     </Routes>   
     </div>
