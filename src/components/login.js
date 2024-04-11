@@ -122,9 +122,9 @@ const [user, setUser] = useState(null);
               <label htmlFor="password" className="text-xl font-sans text-start ">Password</label><br/>
               <input type="password" id="password" name="password" placeholder='+ 6' value={formData.password} onChange={handleChange} className="w-full h-12 rounded-lg border outline-none px-4 mt-2 bg-gray-200" />
             </div><br/>
-            <div className="mb-4 flex flex-warp text-center  lg:ml-20">
-              <input type="checkbox" id="checkbox" name="checkbox" checked={formData.checkbox} onChange={handleChange} className="h-5 w-5 cursor-pointer mt-1 text-green lg:ml-20" />
-              <p className='text-gray-500 font-sans   lg:ml-7 '> Create an account means you're okay with our Terms of services<br /> <span className='text-blue-600 cursor-pointer'>privacy policy</span> , and our default notification settings</p>
+            <div className="mb-4 flex flex-warp justify-center ml-0  ">
+              <input type="checkbox" id="checkbox" name="checkbox" checked={formData.checkbox} onChange={handleChange} className="h-5 w-5 cursor-pointer mt-1  ml-0 " />
+              <p className='text-gray-500 font-sans text-center  lg:ml-7 '> Create an account means you're okay with our Terms of services<br /> <span className='text-blue-600 cursor-pointer'>privacy policy</span> , and our default notification settings</p>
             </div>
             <button
               type="submit"
