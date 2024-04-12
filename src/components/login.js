@@ -72,7 +72,7 @@ const [user, setUser] = useState(null);
 
   return (
     <div className="flex flex-wrap scrollbar-hidden ">
-      <div className='flex flex-wrap float-start lg:w-2/5 ' style={{height:'925px'}} >
+      <div className='flex flex-wrap float-start lg:w-2/5 h-screen  ' >
         <img
           className=" lg:w-full lg:h-full w-full   top-0 left-0"
           src="/side1.jpeg"
@@ -118,7 +118,7 @@ const [user, setUser] = useState(null);
                 onChange={handleChange}
                 className={`w-full h-12 rounded-lg border outline-none px-4 mt-2 ${email ? 'bg-red-300' : 'bg-gray-200'}`} />
             </div><br/>
-            <div className="mb-4  text-start lg:mt-5">
+            <div className="mb-4  text-start lg:mt-3">
               <label htmlFor="password" className="text-xl font-sans text-start ">Password</label><br/>
               <input type="password" id="password" name="password" placeholder='+ 6' value={formData.password} onChange={handleChange} className="w-full h-12 rounded-lg border outline-none px-4 mt-2 bg-gray-200" />
             </div><br/>
