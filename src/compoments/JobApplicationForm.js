@@ -141,7 +141,7 @@ const JobApplicationForm = () => {
         <Container className='bg-slate-900  '>
             <h1 className='text-3xl mx-2 text-center font-semibold text-white mt-20 mb-10'> Intermediate Dynamic Form with Nested Conditional Logic and Multiple
 Field Types</h1>
-            <FormContainer onSubmit={handleSubmit} className='box mb-10 '>
+            <FormContainer onSubmit={handleSubmit} className='box mb-10 lg:mx-auto md:mx-auto mx-2 '>
                 <FormGroup>
                     <Input
                         placeholder='fullName'
